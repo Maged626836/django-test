@@ -1,0 +1,25 @@
+{% include 'parts/nav.html'%}
+
+{% block pagecontat%}
+<br><br><br>
+<h1>this is my book store</h1>
+<a href="http://127.0.0.1:8000/admin"><h2>go to admin page</h2></a>
+
+
+{%for x in pooksobject%}
+<h1>   {{x.nameofbook}}   </h1>
+<br><br>
+
+<br><br> 
+<h3>{{x.category}}</h3>
+<h3>   {{x.content}}   </h3>
+<h3>   {{x.price}}   </h3>
+<hr>
+{%   endfor   %} 
+
+<br><br><br><hr>
+<h1></h1> 
+{% endblock pagecontat%}
+
+
+

@@ -1,0 +1,45 @@
+
+{%  load static %} 
+{% block content%}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Login Form with light button  </title>
+  <link rel="stylesheet" href="{% static 'signin/style.css'%}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-box">
+  <h2>Login</h2>
+
+
+  <form method="post">
+
+
+
+    {% csrf_token %}
+    <div class="user-box">
+      <input type="text" name="username" required="" autofocus minlength="1" maxlength="10">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="" minlength="1" maxlength="15">
+      <label>Password</label>
+    </div>
+    <input type="submit"  id="sup" hidden>
+    <label for="sup"><a href="#" for="sup">
+      <label for="sup"><span></span></label>
+      <label for="sup"><span></span></label>
+      <label for="sup"><span></span></label>
+      <label for="sup"><span ></span></label>
+      <label for="sup"> Submit</label>
+    </a></label>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
+{% endblock content%}
